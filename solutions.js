@@ -20,7 +20,7 @@ function isPalindrome(string) {
         reversed += string.charAt(index)
         index--
     }
-    return string = reversed
+    return string === reversed
 }
 
 function sumAllValuesInAnArray(array) {
@@ -33,7 +33,9 @@ function sumAllValuesInAnArray(array) {
 }
 
 function sumAllLastValuesInSubArray(matrix) {
-
+    return matrix.reduce( (accum, curr) => {
+        return accum += curr.pop()
+    },0)
 }
 
 function studentCreator(first, last) {
