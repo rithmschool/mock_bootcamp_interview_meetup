@@ -87,3 +87,13 @@ function take(array, n) {
     }
     return output
 }
+
+function cycle(array, count, callback) {
+    array.forEach(element => {
+        let counter = count
+        while (counter > 0) {
+            callback(element)
+            counter--
+        }
+    })
+}
